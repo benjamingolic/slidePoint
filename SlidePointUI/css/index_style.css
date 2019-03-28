@@ -1,0 +1,39 @@
+@font-face {
+  font-family: Cafe;
+  src: url("../fonts/cafe.ttf");
+}
+html{
+  padding: 0;
+  margin: 0;
+  background-color: #3B3B3B;
+}
+#wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+#wtsp{
+  font-family: Cafe;
+  color: white;
+  text-align: center;
+  font-size: 80px;
+  margin: 5%;
+}
+#upload{
+  width: 800px;
+  margin-left: 17%;
+/*  border: 5px solid white; */
+}
+#upload:hover{
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+#upload img{
+  margin-left: 17%;
+}
+#label{
+  font-family: Cafe;
+  color: white;
+  text-align: center;
+  font-size: 60px;
+}

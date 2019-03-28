@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>SlidePoint</title>
+  <link rel="stylesheet" href="../css/uploaded.css">
+</head>
+
+<body>
+  <div id="wrapper">
+    <div class="options">
+      <button class="optionsbtn">Dropdown</button>
+      <div class="options-content">
+        <a href="#">
+          <p id="speed">Speed</p>
+        </a>
+        <a href="#">
+          <p id="scale">Scale</p>
+        </a>
+        <a href="slideshow.html">
+          <p id="safe"><b>Safe</b></p>
+        </a>
+        <a href="../index.html">
+          <p id="cancel"><b>Cancel</b></p>
+        </a>
+      </div>
+    </div>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p class="ModalH">Displaytime</p>
+        <form>
+          <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
+          <input type="number" id="number" value="0" />
+          <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+          <br>
+          <br>
+          <input type="submit" id="submitSpeed" />
+        </form>
+      </div>
+    </div>
+    <div id="myModal2" class="modal">
+      <div class="modal-content">
+        <span class="close2">&times;</span>
+        <p class="ModalH">Scale the Pictures</p>
+        <form>
+          <p id="width" class="pSp">Width:</p>
+          <input type="text" name="widthOfPics">
+          <p id="height" class="pSp">Height:</p>
+          <input type="text" name="widthOfPics">
+          <br><br>
+          <input type="submit" id="submitScale" />
+        </form>
+      </div>
+    </div>
+    <div id="content">
+
+    </div>
+  </div>
+
+  <script>
+    var modal = document.getElementById('myModal');
+    var btn = document.getElementById("speed");
+    var modal2 = document.getElementById('myModal2');
+    var btn2 = document.getElementById("scale");
+    var span = document.getElementsByClassName("close")[0];
+    var span2 = document.getElementsByClassName("close2")[0];
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+    btn2.onclick = function() {
+      modal2.style.display = "block";
+    }
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    span2.onclick = function() {
+      modal2.style.display = "none";
+    }
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+      if (event.target == modal2) {
+        modal2.style.display = "none";
+      }
+    }
+    function increaseValue() {
+      var value = parseInt(document.getElementById('number').value, 10);
+      value = isNaN(value) ? 0 : value;
+      value++;
+      document.getElementById('number').value = value;
+    }
+
+    function decreaseValue() {
+      var value = parseInt(document.getElementById('number').value, 10);
+      value = isNaN(value) ? 0 : value;
+      value < 1 ? value = 1 : '';
+      value--;
+      document.getElementById('number').value = value;
+    }
+  </script>
+</body>
+
+</html>
