@@ -19,6 +19,6 @@ Unsere Ergebnisse findet man in unserem GitHub-Repo (https://github.com/benjamin
 
 ## Was müssen wir machen?
 
-Da wir uns jetzt für PHP und NGINX (mit dockern) entschieden haben, müssen wir zuerst dockern und da mit NGINX und PHP arbeiten (ist erledigt). 
-Dann müssen wir den FileUpload mit PHP machen(und nicht wie uhrsprünglich mit node.js). (Ist halbwegs fertig). 
+Da wir uns jetzt für PHP und NGINX (mit dockern) entschieden haben, müssen wir zuerst dockern und da mit NGINX und PHP arbeiten (ist erledigt). <br>
+Dann müssen wir den FileUpload mit PHP machen(und nicht wie uhrsprünglich mit node.js). (Ist halbwegs fertig). <br>
 Wir müssen zu jedem einzelnen Bild die Eigenschaften speichern (welches Format das Bild hat und wie es angezeigt sein soll (z.B.: zentriert,verzehrt, usw.)), das haben wir uns gedacht in eine json zu sprichern. Und dann soll noch die Slideshow erstellt werden(wir arbeiten daran).
