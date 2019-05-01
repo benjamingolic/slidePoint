@@ -1,0 +1,63 @@
+#sortable {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 20%;
+}
+#sortable li {
+    margin: 0 5px 5px 5px;
+    padding: 5px;
+    font-size: 1.2em;
+    height: 1.5em;
+}
+html>body #sortable li {
+    height: 1.5em;
+    line-height: 1.2em;
+}
+.ui-state-highlight {
+    height: 1.5em;
+    line-height: 1.2em;
+}
+
+
+
+ #sortable1{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    width: 243px;
+}
+#sortable1 li{
+    margin: 5px;
+    padding: 5px;
+    font-size: 1.2em;
+    width: 190px;
+}
+
+
+.ui-state-default{
+border: 1px solid #d3d3d3;
+background: #e6e6e6;
+font-weight: normal;
+color: #555555;
+}
+
+.ui-sortable-handle {
+-ms-touch-action: none;
+touch-action: none;
+}
+
+.ui-state-highlight {
+height: 1.5em;
+line-height: 1.2em;
+}
+
+.ui-state-highlight{
+border: 1px solid #fcefa1;
+background: #fbf9ee 50% 50% repeat-x;
+color: #363636;
+}
