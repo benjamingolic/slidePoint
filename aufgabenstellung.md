@@ -3,7 +3,7 @@ Die Erstellung eines Tools, zur fertigung von Slidesshows für das Digital Signa
 * Ordner hochladen
 * Bilder bearbeiten     
 
-                        -Transition hinzufügen
+                        - Transition hinzufügen
                         - Größe ändern (zentriert, angepasst, gestreckt,...)
                         - Bild hoch- od. querformat
                         - Positionierung der Bilder mittels Drag and Drop
