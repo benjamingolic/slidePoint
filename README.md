@@ -17,7 +17,7 @@ UseCase-Diagramm
 
 1. Als erstes kopiert man den Link von unserer Repo und clonet die Repo mit:
    #### git clone link
-   ![LinkzurRepo](Images/screen1.jpg)
+   ![LinkzurRepo](Images/screen1.JPG)
 
 2. Dann geht man in den Ordner slidePoint/upload_docker rein.
     #### cd slidePoint/upload_docker/
