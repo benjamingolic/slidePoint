@@ -8,7 +8,7 @@ Ziel ist es ein Projekt zu erstellen, welches das Anzeigen von Bildern am Digita
 ![Systemarchitektur](Images/sysarchitektur.jpeg)
 Systemarchitektur
 
-![Use-Case Diagramm](Images/usecasediag.jpeg)
+![Use-Case Diagramm](Images/usecasediagram.jpg)
 UseCase-Diagramm
 
 <br>
