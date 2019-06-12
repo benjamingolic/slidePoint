@@ -1,36 +1,37 @@
-<!DOCTYPE html>
-<html>
-<head>
- <meta charset="utf-8">
- <title>FolderUpload</title>
-</head>
-
-<body>
- <form action="folderUpload.php" method="post" enctype="multipart/form-data">
-  Type folder name: <input type="text" name="foldername"/><br><br>
-  Upload Folder: <input type="file" name="files[]" id="files" multiple directory="" webkitdirectory="" mozdirectory="" /><br><br>
-
-  <input id="button" type="submit" name="upload" value="Upload" />
- </form>
-
-<body>
-<html>
-
 <?php
-if(isset($_POST['upload'])){
 
-    if($_POST['foldername'] != ""){
-        $foldername = $_POST['foldername'];
-	if(!is_dir($foldername))
-	    mkdir($foldername);
-	foreach($FILES['files']['name'] as $i -> $name){
-		if(strlen($FILES['files']['name'][$i]) > 1){
-			move_uploaded_file($FILES['files']['name'][$i], $foldername.'/'.$name);
-		}
-	}
-	echo "Folder is successfully uploaded";
+if (isset($_POST["upload"])) {
+    if ($_POST["folderName"] != "") {
+        $folderName = "uploads/" . $_POST["folderName"];
+        if (!is_dir($folderName)) {
+            mkdir($folderName);
+        }
+
+        foreach ($_FILES["files"]["error"] as $index => $error) {
+            if ($error == UPLOAD_ERR_OK) {
+                $tmp_name = $_FILES["files"]["tmp_name"][$index];
+                $name = basename($_FILES["files"]["name"][$index]);
+                move_uploaded_file($tmp_name, $folderName . "/" . $name);
+            }
+        }
+
+        Header("Location: ./editSlides.php?folderName=" . $folderName);
     }
-    else
-   	echo "Upload folder name is not set.";
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>FolderUpload</title>
+</head>
+<body>
+<form action="folderUpload.php" method="post" enctype="multipart/form-data">
+    <label>Type folder name:<input type="text" name="folderName"/></label><br><br>
+    <label>Upload Folder: <input type="file" name="files[]" id="files" multiple directory="" webkitdirectory=""
+                                 mozdirectory=""/></label><br><br>
+    <input id="button" type="submit" name="upload" value="Upload"/>
+</form>
+</body>
+</html>
