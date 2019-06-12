@@ -15,18 +15,21 @@ UseCase-Diagramm
 
 # Anweisungen
 
-1. Als erstes kopiert man den Link von unserer Repo und clonet die Repo mit:
+1. Als erstes kopiert man den Link von unserer Repo und cloned das Repo mit:
    #### git clone link
    ![LinkzurRepo](Images/screen1.JPG)
 
-2. Dann geht man in den Ordner slidePoint/upload_docker rein.
-    #### cd slidePoint/upload_docker/
+2. Man sollte nun Docker starten. In unserem Fall haben wir Docker auf unserer VMware, also müssen wir mit Hilfe von FileZilla oder WinSCP auf            unsere VMware zugreifen und den Ordner dort hochladen.
 
-3. Dann muss Docker gestartet werden. In unserem Fall haben wir Docker auf unserer VMware, also müssen wir mit Hilfe von FileZilla oder WinSCP auf unsere VMware zugreifen und den Ordner upload_docker dort hochladen.
-   
-4. Wenn man Docker gestartet hat bzw. VMware laufen hat und in dem Ordner drinnen ist, startet man docker-compose mit:
+3. Als nächstes gibt sollte folgender Befehl ausgeführt werden um Schreibrechte zu bekommen:
+#### chmod 777 [foldername] 
+falls dieser Befehl nicht funktioniert sollte man diesen anwenden
+#### sudo chown -R www-data [foldername]
+
+4. Nachdem sich der Ordner in einer Umgebung befindet in der Docker installiert ist und die Schreibrechte vergeben sind, führt man folgenden befehl aus um den Docker Container zu starten:
+
     #### docker-compose up -d
-
+     
 5. Wenn das auch fertig ist geht man in einen beliebigen Browser und gibt ein:
    #### ip-adresse:port
    ip-adresse: kann man mit Hilfe von ifconfig herausfinden<br>
