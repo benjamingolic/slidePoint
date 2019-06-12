@@ -10,7 +10,7 @@ if (isset($_GET["folderName"])) {
     echo "<ul id='sortable1' class = 'droptrue js-sort-list'>";
     foreach ($files as $singleFile) {
         $fileName = preg_split("#/#", $singleFile);
-        echo "<li class=\"ui-state-default\"><img src=\"{$singleFile}\" alt=\"{$singleFile}\" height=\"120px\">{$fileName[2]}</li>";
+        echo "<li class=\"ui-state-default\"><img src=\"{$singleFile}\" alt=\"{$singleFile}\" height=\"120px\"><p>{$fileName[2]}</p></li>";
     }
     echo '</ul>';
 }
@@ -26,8 +26,8 @@ if (isset($_GET["folderName"])) {
 </head>
 
 <body>
-<button></button>
 <button onclick="createSlideShow();">Create SlideShow</button>
+<p id="response"></p>
 <script>
     $(function () {
         $("ul.droptrue").sortable({
@@ -42,26 +42,18 @@ if (isset($_GET["folderName"])) {
     });
 
     function createSlideShow() {
-        let imagePaths = <?php echo json_encode($files); ?>;
-        console.log(document.getElementsByTagName("li")[0].innerHTML);
-        let preLoad = [];
-
-        for (let i = 0; i < imagePaths.length; i++) {
-            preLoad[i] = new Image();
-            preLoad[i].src = imagePaths[i];
-        }
-
-        let index = 0;
-
-        function update() {
-            if (preLoad[index] != null) {
-                document.images[index].src = preLoad[index].src;
-                index++;
-                setTimeout(update, 1000);
-            }
-        }
-
-        update();
+        let folderName = "<?php echo $folderName ?>";
+        fetch(`newActiveSlideShow.php?folderName=${folderName}`)
+            .then(value => value.text())
+            .then(value => {
+                let response;
+                if (parseInt(value) === 0) {
+                    response = "Neue SlideShow konnte nicht verwendet werden";
+                } else {
+                    response = "Neue SlideShow ist jetzt aktiv";
+                }
+                document.getElementById("response").innerHTML = response;
+            });
     }
 </script>
 </body>
