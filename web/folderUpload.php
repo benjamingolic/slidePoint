@@ -45,21 +45,46 @@ if (isset($_POST["upload"])) {
   }
 
   label{
-    margin-left: 5vw;
+    margin-left: 0vw;
     text-align: center;
     width: 15vw;
+    text-decoration: underline;
   }
-  #button{
-    margin-left: 5vw;
-    text-align: center;
-    width: 15vw;
-    background: none;
-    color: white;
-    font-size: 2em;
-  }
-  #button:hover {
-    cursor: pointer;
-  }
+
+  input {
+  box-sizing: border-box;
+  width: 50%;
+  padding: 2%;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  border-bottom: 1px solid #DDD;
+  font-size: 120%;
+  outline: none;
+  cursor: text;
+  background-color: transparent;
+  color: white;
+  margin-left: 2%;
+}
+#button{
+  margin-left: 5vw;
+  text-align: center;
+  width: 15vw;
+  background: none;
+  color: white;
+  font-size: 1.5em;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border: 1px solid white;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+#files{
+  border: none;
+}
 </style>
 <body>
 <form action="folderUpload.php" method="post" enctype="multipart/form-data">
