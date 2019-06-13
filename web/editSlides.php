@@ -20,7 +20,17 @@ if (isset($_GET["folderName"])) {
 <head>
     <meta charset="utf-8">
     <title>Drag and Drop List</title>
-    <link rel="stylesheet" href="style.css">
+        <style media="screen">
+      body {
+        background-color: #333333;
+        color: white;
+      }
+      button {
+        width: 20%;
+        height: 5%;
+        display: block;
+      }
+    </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
 </head>

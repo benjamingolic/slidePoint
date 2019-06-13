@@ -21,20 +21,26 @@ if (is_dir("uploads/active") && !is_dir_empty("uploads/active")) {
     <meta charset="UTF-8">
     <title>SlideShow</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <style>
-        #slideShow img {
-            width: 500px;
-        }
+       <style>
+      body{
+          width: 100%;
+          background-color: black;
+          overflow: hidden;
+      }
+      #slideShow img {
+          width: 50%;
+          height: 20%;
+      }
 
-        #slideShow > div {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            right: 10px;
-            bottom: 10px;
-        }
-    </style>
-</head>
+      #slideShow > div {
+          /*position: absolute;
+          top: 10px;
+          left: 10px;
+          right: 10px;
+          bottom: 10px;*/
+          text-align: center;
+      }
+    </style></head>
 <body>
 <div id="slideShow">
     <?php
