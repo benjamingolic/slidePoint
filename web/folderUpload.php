@@ -24,14 +24,15 @@ if (isset($_POST["upload"])) {
 <html lang="de">
 <head>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:600&display=swap" rel="stylesheet">
     <title>FolderUpload</title>
 </head>
 <style media="screen">
   body{
     background-color: #222222;
     color: white;
-    font-family: sans-serif;
-  }
+    font-family: 'Roboto', 'Montserrat Light', 'Open Sans';
+    }
   form{
     background-color: #444444;
     padding-top: 20vh;
